@@ -1,0 +1,169 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7; /* Light gray background */
+}
+
+header {
+    background: linear-gradient(to right, #4a90e2, #7d53e3); /* Gradient background from blue to purple */
+    color: #fff; /* White text color */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Uppercase text */
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+main {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff; /* White content background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.task input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.task label {
+    flex-grow: 1;
+    font-size: 16px; /* Larger text size */
+}
+
+.due-date {
+    font-size: 12px;
+    color: #777;
+}
+
+#add-task-form {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#add-task-form input[type="text"],
+#add-task-form input[type="date"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px; /* Larger text size */
+}
+
+#add-task-form button {
+    padding: 10px 20px;
+    background: linear-gradient(to right, #4a90e2, #7d53e3); /* Gradient background from blue to purple */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s; /* Smooth background and transform transitions */
+}
+
+#add-task-form button:hover {
+    background: linear-gradient(to left, #4a90e2, #7d53e3); /* Gradient background from blue to purple (reverse) */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+    font-size: 14px; /* Slightly smaller text size */
+}
+
+
+/* ... Previous CSS styles ... */
+
+/* Style the checkbox */
+.task input[type="checkbox"] {
+    margin-right: 10px;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    appearance: none; /* Remove default styles */
+    border: 2px solid #3498db; /* Blue border */
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Style the checkbox indicator (when not checked) */
+.task input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-top: none;
+    border-left: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Style the checkbox indicator (when checked) */
+.task input[type="checkbox"]:checked::before {
+    background-color: #3498db; /* Blue background */
+    opacity: 1;
+}
+
+/* Add a cool checked effect for completed tasks */
+.task.completed {
+    background-color: #f2f2f2; /* Light gray background for completed tasks */
+}
+
+/* Animate the checked effect */
+.task.completed label {
+    text-decoration: line-through; /* Strike-through text */
+    color: #777; /* Grayed-out text for completed tasks */
+    transition: color 0.3s ease-in-out;
+}
+
+
+/* ... Previous CSS styles ... */
+
+/* Style the title for a modern look */
+.title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 48px; /* Larger font size */
+    color: #333; /* Dark gray text color */
+    text-transform: uppercase; /* Uppercase text */
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* Add a highlight to the letter 's' for a playful effect */
+.title .highlight {
+    color: #3498db; /* Blue color */
+
+    transform: translateX(-50%);
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventures Todo List</title>
+    <!-- Add your CSS and JavaScript links here -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title"><span >Adventures To</span> 
+            <span class="highlight">
+                Do
+            </span>
+            List 
+        </h1>
+    </header>
+       
+    <main>
+        <!-- Create an empty container for tasks -->
+        <div class="task-list" id="task-list"></div>
+        <form id="add-task-form">
+            <input type="text" id="task-title" placeholder="Add a new adventure" required>
+            <input type="date" id="due-date">
+            <button type="submit">Add Adventure</button>
+        </form>
+        <!-- Filter and sort options, completed adventures counter, etc. -->
+    </main>
+    <footer>
+        <p>&copy; 2023 Adventures Todo List</p>
+    </footer>
+    <!-- Include your JavaScript to handle adventure functionality -->
+    <script src="script.js"></script>
+</body>
+</html>
