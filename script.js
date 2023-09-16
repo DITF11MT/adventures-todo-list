@@ -47,6 +47,7 @@ function createTaskItem(taskKey, taskTitle, dueDate, isChecked) {
         const confirmed = confirm('Are you sure you want to delete this task?');
         if (confirmed) {
             deleteTaskFromFirebase(taskKey);
+            showLoader();
         }
     });
 
@@ -73,6 +74,7 @@ function handleCheckboxChange(event) {
 
 // Function to retrieve tasks from Firebase
 function loadTasksFromFirebase() {
+    showLoader();
     const taskRef = database.ref('tasks');
 
     taskRef.on('value', (snapshot) => {
@@ -97,6 +99,7 @@ function loadTasksFromFirebase() {
                 markTaskAsDoneInFirebase(taskKey, checkbox.checked, checkbox);
             });
         });
+        hideLoader();
     });
 }
 
@@ -107,9 +110,11 @@ function deleteTaskFromFirebase(taskKey) {
     taskRef.remove()
         .then(() => {
             // Task successfully deleted
+            hideLoader();
         })
         .catch((error) => {
             console.error('Error deleting task:', error);
+            hideLoader();
         });
 }
 
@@ -150,3 +155,14 @@ addTaskForm.addEventListener('submit', (event) => {
     taskTitleInput.value = '';
     dueDateInput.value = '';
 });
+
+
+// Show the loader
+function showLoader() {
+    document.querySelector('.loader-container').style.display = 'flex';
+}
+
+// Hide the loader
+function hideLoader() {
+    document.querySelector('.loader-container').style.display = 'none';
+}
