@@ -167,3 +167,22 @@ footer {
 
     transform: translateX(-50%);
 }
+
+
+/* Style for the delete button */
+.delete-button {
+    background-color: transparent; /* Transparent background */
+    color: #ff5733; /* Theme-related color */
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add a hover effect */
+}
+
+.delete-button:hover {
+    background-color: rgba(255, 87, 51, 0.2); /* Light background on hover */
+    color: #ff4422; /* Darker color on hover */
+}
