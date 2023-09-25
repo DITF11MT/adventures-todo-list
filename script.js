@@ -3,13 +3,13 @@ const taskList = document.getElementById('task-list'); // Updated to get task li
 
 // Initialize Firebase
 const firebaseConfig = {
-    apiKey: "AIzaSyBCRiqMFangyXVtmrqZhQmbPQoMRPtaJQQ",
-    authDomain: "adventures-todo-list.firebaseapp.com",
-    databaseURL: "https://adventures-todo-list-default-rtdb.firebaseio.com",
-    projectId: "adventures-todo-list",
-    storageBucket: "adventures-todo-list.appspot.com",
-    messagingSenderId: "795870805575",
-    appId: "1:795870805575:web:eddd0c7cdb0dd2dde3bb62"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
 };
 
 firebase.initializeApp(firebaseConfig);
